@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+    var testSession = dummySession
     var body: some View {
-        Text("Hello, World!")
+        SessionList()
+            .environmentObject(ObservableSessionData())
     }
 }
 
