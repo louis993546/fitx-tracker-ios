@@ -26,6 +26,7 @@
 		A1FE0C2B23E6DC540043815C /* ModelConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE0C2A23E6DC540043815C /* ModelConverters.swift */; };
 		A1FE0C2D23E6F7C20043815C /* ObservableSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE0C2C23E6F7C20043815C /* ObservableSessionData.swift */; };
 		A1FE0C2F23E6FE150043815C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A1FE0C2E23E6FE150043815C /* .gitignore */; };
+		A1FE0C3123E6FFD30043815C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A1FE0C3023E6FFD30043815C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A1FE0C2A23E6DC540043815C /* ModelConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConverters.swift; sourceTree = "<group>"; };
 		A1FE0C2C23E6F7C20043815C /* ObservableSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSessionData.swift; sourceTree = "<group>"; };
 		A1FE0C2E23E6FE150043815C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A1FE0C3023E6FFD30043815C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		A1EF42EA23DD946500E078BE = {
 			isa = PBXGroup;
 			children = (
+				A1FE0C3023E6FFD30043815C /* README.md */,
 				A1FE0C2E23E6FE150043815C /* .gitignore */,
 				A1EF42F523DD946500E078BE /* FitX */,
 				A1EF42F423DD946500E078BE /* Products */,
@@ -197,6 +200,7 @@
 			files = (
 				A1FE0C2F23E6FE150043815C /* .gitignore in Resources */,
 				A1EF430323DD946600E078BE /* LaunchScreen.storyboard in Resources */,
+				A1FE0C3123E6FFD30043815C /* README.md in Resources */,
 				A1EF430023DD946600E078BE /* Preview Assets.xcassets in Resources */,
 				A1EF42FD23DD946600E078BE /* Assets.xcassets in Resources */,
 			);
