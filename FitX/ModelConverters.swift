@@ -12,11 +12,11 @@ import RealmSwift
 func convert(data: List<TrainingData>) -> [Training] {
     return data.map { td in
         switch TrainingType(rawValue: td.type) {
-        case .Placeholder:
+        case .placeholder:
             return UnknownTraining(data: "placeholder")
-        case .RowingMachine:
+        case .rowingMachine:
             return try! td.toRowingMachineTraining()
-        case .WeightMachine:
+        case .weightMachine:
             return try! td.toWeightMachineTraining()
         default:
             return UnknownTraining(data: "Unknown type '\(td.type)'")
@@ -30,9 +30,9 @@ enum TrainingDataError: Error {
 
 extension TrainingData {
     func toWeightMachineTraining() throws -> WeightMachineTraining {
-        guard self.type == TrainingType.WeightMachine.rawValue else {
+        guard self.type == TrainingType.weightMachine.rawValue else {
             throw TrainingDataError.mismatchType(
-                expect: TrainingType.WeightMachine.rawValue,
+                expect: TrainingType.weightMachine.rawValue,
                 instead: self.type
             )
         }
@@ -46,9 +46,9 @@ extension TrainingData {
     }
 
     func toRowingMachineTraining() throws -> RowingMachineTraining {
-        guard self.type == TrainingType.RowingMachine.rawValue else {
+        guard self.type == TrainingType.rowingMachine.rawValue else {
             throw TrainingDataError.mismatchType(
-                expect: TrainingType.RowingMachine.rawValue,
+                expect: TrainingType.rowingMachine.rawValue,
                 instead: self.type
             )
 

@@ -1,5 +1,5 @@
 //
-//  EventRow.swift
+//  TrainingRow.swift
 //  FitX
 //
 //  Created by Louis Tsai on 1/26/20.

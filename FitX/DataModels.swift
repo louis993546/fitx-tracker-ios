@@ -17,14 +17,14 @@ class SessionData: Object {
 }
 
 enum TrainingType: String {
-    case Placeholder
-    case WeightMachine
-    case RowingMachine
+    case placeholder
+    case weightMachine
+    case rowingMachine
 }
 
 // Everything needs to be optional -_-
 class TrainingData: Object {
-    @objc dynamic var type = TrainingType.Placeholder.rawValue
+    @objc dynamic var type = TrainingType.placeholder.rawValue
 
     // common data
     let attachments = List<String>()
