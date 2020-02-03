@@ -9,9 +9,33 @@
 import SwiftUI
 
 struct SessionNew: View {
+    @State var eventsList = [Training]()
+    @State private var showingDiscardAlert = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
-        // TODO I guess eventList should not take anything in this case?
-        EventList(events: dummySession.trainingList)
+        TrainingList(trainings: dummySession.trainingList)
+            .navigationBarTitle(Text("New session"), displayMode: .inline)
+            .navigationBarItems(
+                leading: Button(action: {
+                    self.showingDiscardAlert = true
+                }, label: {
+                    Text("Cancel")
+                }),
+                trailing: Button(action: {
+                    print("save")
+                }, label: {
+                    Text("Save")
+                }))
+            .alert(isPresented: $showingDiscardAlert) {
+                Alert(
+                    title: Text("Discard everything?"),
+                    primaryButton: .destructive(Text("Yes"), action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) ,
+                    secondaryButton: .cancel()
+                )
+        }
     }
 }
 

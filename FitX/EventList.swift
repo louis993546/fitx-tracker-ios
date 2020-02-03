@@ -8,21 +8,23 @@
 
 import SwiftUI
 
-struct EventList: View {
-    let events: [Training]
+struct TrainingList: View {
+    let trainings: [Training]
     
     var body: some View {
         List {
-            ForEach(events, id: \.name) { event in
+            ForEach(trainings, id: \.name) { event in
                 EventRow()
             }
-            Text("extra")
+            EventRow()
         }
+        .onAppear(perform: {UITableView.appearance().separatorStyle = .none })
+        .onDisappear(perform: { UITableView.appearance().separatorStyle = .singleLine })
     }
 }
 
-struct EventList_Previews: PreviewProvider {
+struct TrainingList_Previews: PreviewProvider {
     static var previews: some View {
-        EventList(events: dummySession.trainingList)
+        TrainingList(trainings: dummySession.trainingList)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct SessionList: View {
     @EnvironmentObject var sessions: ObservableSessionData
@@ -19,10 +20,20 @@ struct SessionList: View {
                 }
             }
             .navigationBarTitle(Text("Sessions"))
-            .navigationBarItems(trailing:
-                NavigationLink(destination: SessionNew()) {
-                    Image(systemName: "square.and.pencil")
+            .navigationBarItems(
+                leading: Button(
+                    action: {
+                        let realm = try! Realm()
+                        try! realm.write { realm.deleteAll() }
+                },
+                    label: {
+                        Text("clear all data")
                 }
+                ),
+                trailing: NavigationLink(destination: SessionNew(), label: {
+                    // TODO this looks too small
+                    Image(systemName: "square.and.pencil")
+                })
             )
         }
     }
