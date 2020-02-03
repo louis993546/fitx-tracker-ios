@@ -13,9 +13,9 @@ struct Session: Identifiable {
     var startTime: Date
     var endTime: Date
     var trainingList: [Training]
-    
+
     func getReadableTitle() -> String {
-        if (startTime.isSameDayAs(other: endTime)) {
+        if startTime.isSameDayAs(other: endTime) {
             return Date.dateCheckerFormatter.string(from: startTime)
         } else {
             return "\(Date.dateCheckerFormatter.string(from: startTime)) - \(Date.dateCheckerFormatter.string(from: endTime))"
@@ -57,7 +57,7 @@ struct WeightMachineTraining: Training {
     var weight: Float
     var sets: Int
     var reps: Int
-    
+
     var name: String {
         return "\(weightMachine): \(weight)kg, \(sets)x\(reps)"
     }
@@ -69,7 +69,7 @@ struct RowingMachineTraining: Training {
     var rating: Int
     var resistance: Int
     var averageHeartRate: Int?
-    
+
     var name: String {
         return "\(distance)m, \(duration), rating \(rating)"
     }

@@ -36,7 +36,7 @@ extension TrainingData {
                 instead: self.type
             )
         }
-        
+
         return WeightMachineTraining(
             weightMachine: WeightMachine(rawValue: self.weightMachineCode.value!)!,
             weight: self.weight.value!,
@@ -44,14 +44,14 @@ extension TrainingData {
             reps: self.reps.value!
         )
     }
-    
+
     func toRowingMachineTraining() throws -> RowingMachineTraining {
         guard self.type == TrainingType.RowingMachine.rawValue else {
             throw TrainingDataError.mismatchType(
                 expect: TrainingType.RowingMachine.rawValue,
                 instead: self.type
             )
-            
+
         }
         return RowingMachineTraining(
             distance: self.distance.value!,

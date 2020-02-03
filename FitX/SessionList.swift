@@ -11,7 +11,7 @@ import RealmSwift
 
 struct SessionList: View {
     @EnvironmentObject var sessions: ObservableSessionData
-    
+
     var body: some View {
         NavigationView {
             List(sessions.sessions) { session in

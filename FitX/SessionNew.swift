@@ -12,7 +12,7 @@ struct SessionNew: View {
     @State var eventsList = [Training]()
     @State private var showingDiscardAlert = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+
     var body: some View {
         TrainingList(trainings: dummySession.trainingList)
             .navigationBarTitle(Text("New session"), displayMode: .inline)

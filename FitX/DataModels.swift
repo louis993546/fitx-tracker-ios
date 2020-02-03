@@ -25,22 +25,22 @@ enum TrainingType: String {
 // Everything needs to be optional -_-
 class TrainingData: Object {
     @objc dynamic var type = TrainingType.Placeholder.rawValue
-    
+
     // common data
     let attachments = List<String>()
     let heartRate = RealmOptional<Int>()
-    
+
     // weight machine
     let weightMachineCode = RealmOptional<Int>()
     let weight = RealmOptional<Float>()
     let reps = RealmOptional<Int>()
     let sets = RealmOptional<Int>()
-    
+
     // rowing machine
     let distance = RealmOptional<Float>()
     let duration = RealmOptional<TimeInterval>()    // TODO does it work like this?
     let rating = RealmOptional<Int>()
     let resistance = RealmOptional<Int>()
-    
+
     // add more here
 }

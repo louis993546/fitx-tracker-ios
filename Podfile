@@ -7,5 +7,6 @@ target 'FitX' do
 
   # Pods for FitX
   pod 'RealmSwift'
+  pod 'SwiftLint'
 
 end

@@ -15,7 +15,7 @@ struct SessionRow: View {
         formatter.dateFormat = "yyyy.MM.dd"
         return formatter
     }()
-    
+
     var body: some View {
         HStack {
             VStack(alignment: HorizontalAlignment.leading) {
@@ -49,7 +49,7 @@ extension Date {
         formatter.dateFormat = "yyyy.MM.dd"
         return formatter
     }()
-    
+
     func isSameDayAs(other: Date) -> Bool {
         let this = "\(Date.dateCheckerFormatter.string(from: self))"
         let that = "\(Date.dateCheckerFormatter.string(from: other))"

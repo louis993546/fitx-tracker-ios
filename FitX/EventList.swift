@@ -10,10 +10,10 @@ import SwiftUI
 
 struct TrainingList: View {
     let trainings: [Training]
-    
+
     var body: some View {
         List {
-            ForEach(trainings, id: \.name) { event in
+            ForEach(trainings, id: \.name) { _ in
                 EventRow()
             }
             EventRow()

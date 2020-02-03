@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SessionDetail: View {
     let session: Session
-    
+
     var body: some View {
         NavigationView {
             Text("Hello, World!")
