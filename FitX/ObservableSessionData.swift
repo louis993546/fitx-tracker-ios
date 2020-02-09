@@ -18,6 +18,7 @@ final class ObservableSessionData: ObservableObject {
     init() {
         let realm = try! Realm()
         let data = realm.objects(SessionData.self)
+            .sorted(byKeyPath: "startTime", ascending: false)
         sessions = data.map { $0.toSession() }
         activateChannelsToken()
     }

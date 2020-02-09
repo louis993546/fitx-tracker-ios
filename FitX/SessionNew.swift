@@ -59,6 +59,8 @@ struct SessionNew: View {
             }
             )
         }
+        .edgesIgnoringSafeArea(.bottom)
+        // TODO: how to extend Toolbar?
     }
 }
 

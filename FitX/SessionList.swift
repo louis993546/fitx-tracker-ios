@@ -11,7 +11,7 @@ import RealmSwift
 
 struct SessionList: View {
     @EnvironmentObject var sessions: ObservableSessionData
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -26,23 +26,54 @@ struct SessionList: View {
                         action: {
                             let realm = try! Realm()
                             try! realm.write { realm.deleteAll() }
+                    }) {
+                        Text("clear all data")
                     },
-                        label: {
-                            Text("clear all data")
+                    trailing: Button(action: {
+                        let realm = try! Realm()
+                        try! realm.write {
+                            let dummyData = SessionData()
+                            let now = Date()
+                            var aWhileAgo = Date()
+                            aWhileAgo.addTimeInterval(TimeInterval(Int.random(in: -36000 ... -3600)))
+                            dummyData.endTime = now
+                            dummyData.startTime = aWhileAgo
+                            realm.add(dummyData)
+                        }
+                    }) {
+                        Text("Add dummy item")
                     }
-                    )
                 )
-
+                
                 HStack {
-                    Text("Last workout: _d")
+                    Text("Last workout: \(test())")
                         .font(.footnote)
                     Spacer()
                     NavigationLink(destination: SessionNew(), label: {
                         Image(systemName: "square.and.pencil")
+                        .accessibility(hint: Text("Add new session"))
                     })
                 }.padding()
             }
+            
+            
         }
+    }
+    
+    // TODO: there's got to be a better way to do this
+    // TODO: turn this into time ago
+    func test() -> String {
+        let x = sessions.sessions.first
+        let startDate = x?.startTime
+        
+        if startDate != nil {
+            let df = DateFormatter()
+            df.dateFormat = "yyyy-MM-dd"
+            return df.string(from: startDate!)
+        } else {
+            return "N/A"
+        }
+        
     }
 }
 
