@@ -32,8 +32,10 @@ struct SessionList: View {
                     }
                     )
                 )
-                
+
                 HStack {
+                    Text("Last workout: _d")
+                        .font(.footnote)
                     Spacer()
                     NavigationLink(destination: SessionNew(), label: {
                         Image(systemName: "square.and.pencil")

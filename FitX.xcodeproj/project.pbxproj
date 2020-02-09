@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7628C4E17DAB1F1BA0D26628 /* Pods_FitX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D3CA6FFFF187AD83053BD4 /* Pods_FitX.framework */; };
 		A169C70023DDB91700495B01 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A169C6FF23DDB91700495B01 /* DataModels.swift */; };
+		A1D34EA623F0146400045F66 /* SessionNewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D34EA523F0146400045F66 /* SessionNewToolbar.swift */; };
+		A1D34EA823F015FC00045F66 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D34EA723F015FC00045F66 /* Styles.swift */; };
+		A1D34EAA23F01E4D00045F66 /* TrainingRowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D34EA923F01E4D00045F66 /* TrainingRowTest.swift */; };
+		A1D34EAC23F0283400045F66 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D34EAB23F0283400045F66 /* Dimensions.swift */; };
 		A1EAD28F23E8B63200179D0C /* TrainingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EAD28D23E8B63200179D0C /* TrainingRow.swift */; };
 		A1EAD29023E8B63200179D0C /* TrainingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EAD28E23E8B63200179D0C /* TrainingList.swift */; };
 		A1EAD29223E8B6B500179D0C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A1EAD29123E8B6B500179D0C /* .swiftlint.yml */; };
@@ -35,6 +39,10 @@
 		10D3CA6FFFF187AD83053BD4 /* Pods_FitX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F06855EE7C1B78DBB1ACDA4 /* Pods-FitX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitX.release.xcconfig"; path = "Target Support Files/Pods-FitX/Pods-FitX.release.xcconfig"; sourceTree = "<group>"; };
 		A169C6FF23DDB91700495B01 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		A1D34EA523F0146400045F66 /* SessionNewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionNewToolbar.swift; sourceTree = "<group>"; };
+		A1D34EA723F015FC00045F66 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		A1D34EA923F01E4D00045F66 /* TrainingRowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRowTest.swift; sourceTree = "<group>"; };
+		A1D34EAB23F0283400045F66 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		A1EAD28D23E8B63200179D0C /* TrainingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingRow.swift; sourceTree = "<group>"; };
 		A1EAD28E23E8B63200179D0C /* TrainingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingList.swift; sourceTree = "<group>"; };
 		A1EAD29123E8B6B500179D0C /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 			children = (
 				A1EF42F623DD946500E078BE /* AppDelegate.swift */,
 				A1EF42F823DD946500E078BE /* SceneDelegate.swift */,
+				A1D34EA723F015FC00045F66 /* Styles.swift */,
+				A1D34EAB23F0283400045F66 /* Dimensions.swift */,
 				A1EF42FA23DD946500E078BE /* ContentView.swift */,
 				A169C6FF23DDB91700495B01 /* DataModels.swift */,
 				A1FE0C2A23E6DC540043815C /* ModelConverters.swift */,
@@ -123,8 +133,10 @@
 				A1EF430A23DD95C400E078BE /* SessionRow.swift */,
 				A1EF431223DDA8F700E078BE /* SessionDetail.swift */,
 				A1EF431423DDA93300E078BE /* SessionNew.swift */,
+				A1D34EA523F0146400045F66 /* SessionNewToolbar.swift */,
 				A1EAD28E23E8B63200179D0C /* TrainingList.swift */,
 				A1EAD28D23E8B63200179D0C /* TrainingRow.swift */,
+				A1D34EA923F01E4D00045F66 /* TrainingRowTest.swift */,
 				A1EF42FC23DD946600E078BE /* Assets.xcassets */,
 				A1EF430123DD946600E078BE /* LaunchScreen.storyboard */,
 				A1EF430423DD946600E078BE /* Info.plist */,
@@ -286,12 +298,16 @@
 				A1EAD29023E8B63200179D0C /* TrainingList.swift in Sources */,
 				A1EF42FB23DD946500E078BE /* ContentView.swift in Sources */,
 				A1EF431323DDA8F700E078BE /* SessionDetail.swift in Sources */,
+				A1D34EAC23F0283400045F66 /* Dimensions.swift in Sources */,
 				A1EF430B23DD95C400E078BE /* SessionRow.swift in Sources */,
 				A1EF431523DDA93300E078BE /* SessionNew.swift in Sources */,
 				A169C70023DDB91700495B01 /* DataModels.swift in Sources */,
+				A1D34EAA23F01E4D00045F66 /* TrainingRowTest.swift in Sources */,
+				A1D34EA823F015FC00045F66 /* Styles.swift in Sources */,
 				A1FE0C2D23E6F7C20043815C /* ObservableSessionData.swift in Sources */,
 				A1EF430D23DD960500E078BE /* Models.swift in Sources */,
 				A1EAD28F23E8B63200179D0C /* TrainingRow.swift in Sources */,
+				A1D34EA623F0146400045F66 /* SessionNewToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

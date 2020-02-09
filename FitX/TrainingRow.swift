@@ -8,21 +8,28 @@
 
 import SwiftUI
 
-struct EventRow: View {
+struct TrainingRow: View {
+    var inFocus: Bool
+
     var body: some View {
         HStack {
-            Text("test")
-                .padding()
+            Text("test").padding()
             Spacer()
         }
-        .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+        .background(primaryColor)
         .cornerRadius(10)
     }
 }
 
-struct EventRow_Previews: PreviewProvider {
+struct TrainingRow_Previews: PreviewProvider {
     static var previews: some View {
-        EventRow()
-            .previewLayout(.fixed(width: 375, height: 100))
+        Group {
+            TrainingRow(inFocus: false)
+                .environment(\.colorScheme, .dark)
+
+            TrainingRow(inFocus: false)
+                .environment(\.colorScheme, .light)
+        }
+        .previewLayout(.fixed(width: 375, height: 100))
     }
 }

@@ -14,12 +14,15 @@ struct TrainingList: View {
     var body: some View {
         List {
             ForEach(trainings, id: \.name) { _ in
-                EventRow()
+                TrainingRow(inFocus: false)
             }
-            EventRow()
+//            TrainingRow(inFocus: false)
+            TrainingRowTest()
         }
-        .onAppear(perform: {UITableView.appearance().separatorStyle = .none })
-        .onDisappear(perform: { UITableView.appearance().separatorStyle = .singleLine })
+        .onAppear(perform: { UITableView.appearance().separatorStyle = .none })
+        .onDisappear(perform: {
+            UITableView.appearance().separatorStyle = .singleLine
+        })
     }
 }
 
