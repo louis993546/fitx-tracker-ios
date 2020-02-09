@@ -35,7 +35,7 @@ struct SessionList: View {
                             let dummyData = SessionData()
                             let now = Date()
                             var aWhileAgo = Date()
-                            aWhileAgo.addTimeInterval(TimeInterval(Int.random(in: -36000 ... -3600)))
+                            aWhileAgo.addTimeInterval(-3600)
                             dummyData.endTime = now
                             dummyData.startTime = aWhileAgo
                             realm.add(dummyData)
@@ -46,8 +46,10 @@ struct SessionList: View {
                 )
                 
                 HStack {
-                    Text("Last workout: \(test())")
-                        .font(.footnote)
+                    if self.test() != nil {
+                        Text("Last workout: \(self.test()!)")
+                            .font(.footnote)
+                    }
                     Spacer()
                     NavigationLink(destination: SessionNew(), label: {
                         Image(systemName: "square.and.pencil")
@@ -61,8 +63,8 @@ struct SessionList: View {
     }
     
     // TODO: there's got to be a better way to do this
-    // TODO: turn this into time ago
-    func test() -> String {
+    
+    func test() -> String? {
         let x = sessions.sessions.first
         let startDate = x?.startTime
         
@@ -71,7 +73,7 @@ struct SessionList: View {
             df.dateFormat = "yyyy-MM-dd"
             return df.string(from: startDate!)
         } else {
-            return "N/A"
+            return nil
         }
         
     }
