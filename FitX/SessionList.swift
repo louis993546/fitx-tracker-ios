@@ -14,27 +14,32 @@ struct SessionList: View {
 
     var body: some View {
         NavigationView {
-            List(sessions.sessions) { session in
-                NavigationLink(destination: SessionDetail(session: session)) {
-                    SessionRow(session: session)
+            VStack {
+                List(sessions.sessions) { session in
+                    NavigationLink(destination: SessionDetail(session: session)) {
+                        SessionRow(session: session)
+                    }
                 }
+                .navigationBarTitle(Text("Sessions"))
+                .navigationBarItems(
+                    leading: Button(
+                        action: {
+                            let realm = try! Realm()
+                            try! realm.write { realm.deleteAll() }
+                    },
+                        label: {
+                            Text("clear all data")
+                    }
+                    )
+                )
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: SessionNew(), label: {
+                        Image(systemName: "square.and.pencil")
+                    })
+                }.padding()
             }
-            .navigationBarTitle(Text("Sessions"))
-            .navigationBarItems(
-                leading: Button(
-                    action: {
-                        let realm = try! Realm()
-                        try! realm.write { realm.deleteAll() }
-                },
-                    label: {
-                        Text("clear all data")
-                }
-                ),
-                trailing: NavigationLink(destination: SessionNew(), label: {
-                    // TODO this looks too small
-                    Image(systemName: "square.and.pencil")
-                })
-            )
         }
     }
 }

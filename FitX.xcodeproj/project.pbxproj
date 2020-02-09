@@ -111,8 +111,6 @@
 		A1EF42F523DD946500E078BE /* FitX */ = {
 			isa = PBXGroup;
 			children = (
-				A1EAD28E23E8B63200179D0C /* TrainingList.swift */,
-				A1EAD28D23E8B63200179D0C /* TrainingRow.swift */,
 				A1EF42F623DD946500E078BE /* AppDelegate.swift */,
 				A1EF42F823DD946500E078BE /* SceneDelegate.swift */,
 				A1EF42FA23DD946500E078BE /* ContentView.swift */,
@@ -125,6 +123,8 @@
 				A1EF430A23DD95C400E078BE /* SessionRow.swift */,
 				A1EF431223DDA8F700E078BE /* SessionDetail.swift */,
 				A1EF431423DDA93300E078BE /* SessionNew.swift */,
+				A1EAD28E23E8B63200179D0C /* TrainingList.swift */,
+				A1EAD28D23E8B63200179D0C /* TrainingRow.swift */,
 				A1EF42FC23DD946600E078BE /* Assets.xcassets */,
 				A1EF430123DD946600E078BE /* LaunchScreen.storyboard */,
 				A1EF430423DD946600E078BE /* Info.plist */,
